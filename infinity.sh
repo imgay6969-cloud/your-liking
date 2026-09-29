@@ -5,7 +5,7 @@ trap 'echo "❌ FAILED at line $LINENO"' ERR
 rm -rf .repo/local_manifests
 
 # LFS wapas laga diya taaki vendor files miss na hon
-repo init --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 16-QPR1 -g default,-mips,-darwin,-notdefault
+repo init --depth=1 --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 16-QPR1 -g default,-mips,-darwin,-notdefault
 
 git clone https://github.com/imgay6969-cloud/local_manifests.git -b A16 .repo/local_manifests
 
